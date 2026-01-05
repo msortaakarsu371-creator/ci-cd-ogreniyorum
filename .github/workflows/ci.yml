@@ -23,3 +23,8 @@ jobs:
 
       - name: Testleri çalıştır
         run: pytest
+
+      - name: Security check
+        run: |
+          pip install bandit
+          bandit -r .
