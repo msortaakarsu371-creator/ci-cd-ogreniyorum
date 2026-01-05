@@ -33,7 +33,9 @@ def test_sql_connection(server_name, database_name, username=None, password=None
         return True, "Connection successful"
     except Exception as e:
         return False, str(e)
-
+@app.route("/health")
+def health():
+    return {"status": "ok"}, 200
 @app.route('/api/linked-services', methods=['GET'])
 def get_linked_services():
     """Get all linked services"""
