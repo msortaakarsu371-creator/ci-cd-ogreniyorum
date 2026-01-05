@@ -1,0 +1,16 @@
+name: CI Ogreniyorum
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  calistir:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repo’yu al
+        uses: actions/checkout@v4
+
+      - name: Mesaj yaz
+        run: echo "CI/CD çalıştı 🎉"
