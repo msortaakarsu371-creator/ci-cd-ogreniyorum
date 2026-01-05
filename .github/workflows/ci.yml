@@ -18,6 +18,8 @@ jobs:
         with:
           python-version: "3.10"
 
+      - name: Paketleri kur
+        run: pip install -r requirements.txt
+
       - name: Uygulamayı çalıştır
         run: python app.py
-
